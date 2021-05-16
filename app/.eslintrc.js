@@ -2,7 +2,7 @@ module.exports = {
     root: true, // .eslintrc.jsがプロジェクトのルートに配置させているか（指定がないと上位階層へ設定ファイルを探索される）
     parser: '@typescript-eslint/parser', // ESLintにTypeScriptを理解させる
     parserOptions: {
-      project: 'app/tsconfig.json', // tsconfig.jsonの場所を指定
+      project: 'tsconfig.json', // tsconfig.jsonの場所を指定
       sourceType: 'module',
     },
     plugins: [
@@ -15,7 +15,7 @@ module.exports = {
       'plugin:@typescript-eslint/recommended', // 型チェックが不要なルールを適用
       'plugin:@typescript-eslint/recommended-requiring-type-checking', // 型チェックが必要なルールを適用
        //'prettier/@typescript-eslint', // Prettierでカバーできるルールを無効化(eslint 8.x以上では不要とのことhttps://qiita.com/yuma-ito-bd/items/cca7490fd7e300bbf169)
-       //'plugin:prettier/recommended' // Prettierのお勧めルールセットを適用(https://dev.classmethod.jp/articles/eslint-and-prettier/)
+       'plugin:prettier/recommended', // Prettierのお勧めルールセットを適用(https://dev.classmethod.jp/articles/eslint-and-prettier/)
        'prettier'
     ],
     ignorePatterns: ['.eslintrc.js'],
